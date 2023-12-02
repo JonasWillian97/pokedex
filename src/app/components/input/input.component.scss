@@ -1,0 +1,14 @@
+$width: 100%;
+$background: transparent;
+$border: none;
+$cursor: pointer;
+
+mat-form-field{
+    width: $width;
+}
+
+button{
+    background-color: $background;
+    border: $border;
+    cursor: $cursor;
+}
