@@ -1,5 +1,5 @@
 <mat-card>
-    <app-input></app-input>
+    <app-input (input)="searchPokemon($any($event.target).value)"></app-input>
     <div class="card_title">
         <h1>{{pokemons$.name | uppercase}}</h1>
     </div>

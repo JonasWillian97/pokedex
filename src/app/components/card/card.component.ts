@@ -19,8 +19,12 @@ export class CardComponent {
     types: []
   }
   constructor(private pokeService: PokemonService){
-    this.pokeService.getPokemon().subscribe({
-
+    this.searchPokemon('ditto');
+  }
+  
+  searchPokemon(search: string){
+    this.pokeService.getPokemon(search).subscribe({
+  
       next:(res) => {
         this.pokemons$ = {
           id: res.id,
@@ -30,5 +34,6 @@ export class CardComponent {
         }
       }
     })
+    
   }
 }
