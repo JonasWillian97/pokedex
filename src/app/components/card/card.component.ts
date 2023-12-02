@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Pokemons } from 'src/app/models/Pokemeons';
 import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
@@ -8,7 +10,25 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 })
 export class CardComponent {
 
+  pokemons$: Pokemons = {
+    id: 0,
+    name: "",
+    sprites: {
+      front_default: ""
+    },
+    types: []
+  }
   constructor(private pokeService: PokemonService){
-    
+    this.pokeService.getPokemon().subscribe({
+
+      next:(res) => {
+        this.pokemons$ = {
+          id: res.id,
+          name: res.name,
+          sprites: res.sprites,
+          types: res.types
+        }
+      }
+    })
   }
 }

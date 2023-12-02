@@ -1,11 +1,13 @@
 <mat-card>
     <div class="card_title">
-        <h1>Charizard</h1>
+        <h1>{{pokemons$.name | uppercase}}</h1>
     </div>
     <div class="card_body">
-        <img src="" alt="pokemón" />
+        <img [src]="pokemons$.sprites.front_default" alt="pokemón" />
     </div>
     <div class="card_attribute">
-        <span>Fire</span>
+        <span *ngFor="let p of pokemons$.types">
+            {{p.type.name | uppercase}}
+        </span>
     </div>
   </mat-card>

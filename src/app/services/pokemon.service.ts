@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environments } from 'src/environments/environments';
+import { Pokemons } from '../models/Pokemeons';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,6 @@ export class PokemonService {
    }
 
    getPokemon(){
-    return this.http.get(`${this.baseUrl}`) ; 
+    return this.http.get<Pokemons>(`${this.baseUrl}`) ; 
    }
 }

@@ -23,6 +23,10 @@ mat-card{
     justify-content: $justify;
 }
 
+.card_body > img{
+    height: 80%;
+}
+
 .card_attribute{
     text-align: $textAign;
     padding: 15px;
