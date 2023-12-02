@@ -1,0 +1,36 @@
+$padding: 20px;
+$borderRadius: 6px;
+$background: #696565;
+$display: flex;
+$justify: center;
+$textAign: center;
+
+mat-card{
+    margin: 50px 20px;
+    padding: $padding;
+}
+
+.card_title{
+    text-align: $textAign;
+    color: coral;
+}
+
+.card_body{
+    background-color: $background;
+    height: 300px;
+    border-radius: $borderRadius;
+    display: $display;
+    justify-content: $justify;
+}
+
+.card_attribute{
+    text-align: $textAign;
+    padding: 15px;
+}
+
+
+.card_attribute > span{
+    background-color: coral;
+    padding: 10px;
+    border-radius: $borderRadius;
+}
