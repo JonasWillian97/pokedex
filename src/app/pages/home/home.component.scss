@@ -1,0 +1,11 @@
+$textALign: center;
+$color: coral;
+$marginTop: 20px;
+
+
+h1{
+    font-size: 30px;
+    color: $color;
+    text-align: $textALign;
+    margin-top: $marginTop;
+}
