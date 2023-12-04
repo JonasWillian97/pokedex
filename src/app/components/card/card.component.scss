@@ -8,11 +8,13 @@ $textAign: center;
 mat-card{
     margin: 50px 20px;
     padding: $padding;
+
 }
 
 .card_title{
     text-align: $textAign;
     color: coral;
+    font-size: 30px;
 }
 
 .card_body{
@@ -37,4 +39,40 @@ mat-card{
     background-color: coral;
     padding: 10px;
     border-radius: $borderRadius;
+    margin-left: 6px;
+    margin-top: 12px;
+}
+
+@media (max-width:400px) {
+    .card_body > img{
+        height: 60%;
+    }
+
+}
+
+@media (max-width:260px) {
+    .card_body > img{
+        height: 40%;
+    }
+
+    .card_title > h1 {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width:200px) {
+    .card_body > img{
+        height: 30%;
+    }
+
+}
+
+
+@media (max-width:240px) {
+    .card_attribute> span{
+        flex-direction: column;
+        margin-top: 12px;
+    }
+
 }
